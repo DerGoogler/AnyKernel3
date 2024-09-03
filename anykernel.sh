@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string= KernelSU for a70q - Der_Googler
+kernel.string=Kernel for a70q - Der_Googler
 do.devicecheck=1
 do.modules=0
 do.systemless=1
