@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string= KernelSU for a70q - Vaz15K
+kernel.string= KernelSU for a70q - Der_Googler
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -12,7 +12,7 @@ do.cleanup=1
 do.cleanuponabort=0
 device.name1=a70q
 device.name2=a70s
-supported.versions= 12 - 14
+supported.versions=12 - 14
 supported.patchlevels=
 supported.vendorpatchlevels=
 '; } # end properties
