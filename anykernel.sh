@@ -53,12 +53,5 @@ patch_fstab fstab.tuna /cache ext4 options "barrier=1" "barrier=0,nomblk_io_subm
 patch_fstab fstab.tuna /data ext4 options "data=ordered" "nomblk_io_submit,data=writeback";
 append_file fstab.tuna "usbdisk" fstab;
 
-# boot install
-if [ -L "/dev/block/bootdevice/by-name/init_boot_a" -o -L "/dev/block/by-name/init_boot_a" ] || [ -L "/dev/block/bootdevice/by-name/init_boot" -o -L "/dev/block/by-name/init_boot" ]; then
-    split_boot # for devices with init_boot ramdisk
-    flash_boot # for devices with init_boot ramdisk
-else
-    dump_boot # use split_boot to skip ramdisk unpack, e.g. for devices with init_boot ramdisk
-    write_boot # use flash_boot to skip ramdisk repack, e.g. for devices with init_boot ramdisk
-fi
+write_boot; # use flash_boot to skip ramdisk repack, e.g. for devices with init_boot ramdisk
 ## end boot install
